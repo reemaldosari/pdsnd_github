@@ -2,7 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
-#Lists
+#Lists used in the code
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -93,7 +93,7 @@ def time_stats(df):
         str(df['month'].mode().values[0]))
     )
 
-    # display the most common day of week
+    # display the most common day of week by using mod
     print("The most common day of the week: ".format(
         str(df['day_of_week'].mode().values[0]))
     )
