@@ -7,9 +7,9 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-MONTHS = ['january' , 'february' , 'march', 'april', 'may', 'june', 'all']
+months = ['january' , 'february' , 'march', 'april', 'may', 'june', 'all']
 
-DAYS = ['sunday', 'monday', 'tuesday', 'wednesday',
+days = ['sunday', 'monday', 'tuesday', 'wednesday',
         'thursday', 'friday', 'saturday', 'all']
 
 def get_filters():
@@ -32,13 +32,13 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
     month = input ("Enter  one of the first six months or type all if you want all of them: ").lower()
-    while month not in MONTHS:
+    while month not in months:
         print(" The month you entered is invalid ")
     print("The month you selected is " + (month))
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input ("Enter a week day: ")
-    while day not in DAYS:
+    while day not in days:
         print(" The day you entered is invalid ")
     print("The day you selected is " + (day))
 
@@ -68,11 +68,10 @@ def load_data(city, month, day):
 #check month
     if month != 'all':
         # use the index of the months list to get the corresponding int
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
 
 
-        df = df.loc[df['month'] == month,:]
+        df = df[df['month'] == month]
 
     # filter by day of week if applicable
     if day != 'all':
