@@ -1,8 +1,8 @@
 ### Date created
-Saturday 6/12/2019
+Saturday : 6/12/2019
 
 ### Project Title
-GitHub Project
+GitHub Project udacity
 
 ### Description
 Udacity gitHub project
