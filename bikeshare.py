@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
+#Lists
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -19,11 +20,11 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    
+
     print('Hello! Let\'s explore some US bikeshare data!')
- 
+
     city = input ("Enter  one of these cities (chicago, new york city, washington): ").lower()
-    
+
     while city not in CITY_DATA:
         print("The city you entered: %s , is invalid " % (city))
         city = input ("Enter  one of these cities (chicago, new york city, washington): ")
@@ -31,13 +32,13 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
     month = input ("Enter  one of the first six months or type all if you want all of them: ").lower()
-    while month not in MONTHS:    
+    while month not in MONTHS:
         print(" The month you entered is invalid ")
     print("The month you selected is " + (month))
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input ("Enter a week day: ")
-    while day not in DAYS:    
+    while day not in DAYS:
         print(" The day you entered is invalid ")
     print("The day you selected is " + (day))
 
@@ -64,13 +65,13 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].apply(lambda x: x.month)
     df['day_of_week'] = df['Start Time'].apply(lambda x: x.strftime('%A').lower())
 
-
+#check month
     if month != 'all':
         # use the index of the months list to get the corresponding int
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
 
-        
+
         df = df.loc[df['month'] == month,:]
 
     # filter by day of week if applicable
@@ -124,12 +125,12 @@ def station_stats(df):
     print("Most Common End Station is "+ (end_station))
 
 
-    # TO DO: display most frequent combination of start station and end station trip  
+    # TO DO: display most frequent combination of start station and end station trip
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    
+
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -139,13 +140,13 @@ def trip_duration_stats(df):
     # TO DO: display total travel time
     trip_duration= df['Trip Duration'].sum()
     print("Total Travel Time is %s in seconds " % (trip_duration))
-    
+
 
     # TO DO: display mean travel time
     trip_mean = df['Trip Duration'].mean()
     print("Mean Travel Time is %s in seconds " % (trip_mean))
-    
-    print("\nThis took %s seconds." % (time.time() - start_time))      
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
