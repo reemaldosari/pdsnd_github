@@ -5,7 +5,7 @@ Saturday : 6/12/2019
 GitHub Project Udacity
 
 ### Description
-Udacity GitHub project
+ a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. the system compare usage between three large cities: Chicago, New York City, and Washington, DC.
 
 ### Files used
 bikeshare file
