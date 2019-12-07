@@ -1,15 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+Saturday 6/12/2019
 
 ### Project Title
-Replace the Project Title
+GitHub Project
 
 ### Description
-Describe what your project is about and what it does
+Udacity gitHub project
 
 ### Files used
-Include the files used
+bikeshare file
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+udacity.com
