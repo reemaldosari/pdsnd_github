@@ -31,13 +31,13 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
     month = input ("Enter  one of the first six months or type all if you want all of them: ").lower()
-    while month not in MONTHS:
+    while month not in months:
         print(" The month you entered is invalid ")
     print("The month you selected is " + (month))
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input ("Enter a week day: ")
-    while day not in DAYS:
+    while day not in days:
         print(" The day you entered is invalid ")
     print("The day you selected is " + (day))
 
