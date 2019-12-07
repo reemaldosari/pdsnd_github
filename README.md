@@ -2,10 +2,10 @@
 Saturday : 6/12/2019
 
 ### Project Title
-GitHub Project udacity
+GitHub Project Udacity
 
 ### Description
-Udacity gitHub project
+Udacity GitHub project
 
 ### Files used
 bikeshare file
